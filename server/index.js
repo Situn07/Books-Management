@@ -18,15 +18,11 @@ const PORT = process.env.PORT || 5000;
 app.use(express.json());
 
 // CORS configuration
-const corsOptions = {
-  origin: 'http://localhost:5173', // Only allow frontend origin
-  credentials: true,
-  optionsSuccessStatus: 200
-};
+
 
 
 // CORS middleware
-app.use(cors(corsOptions));
+app.use(cors());
 
 // Routes
 app.use('/api/books', bookRoutes);
