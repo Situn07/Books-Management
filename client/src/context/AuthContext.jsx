@@ -51,7 +51,7 @@ export const AuthProvider = ({ children }) => {
 
   const register = async (email, password) => {
     try {
-      await axios.post('http://localhost:5000/api/auth/register', {
+      await axios.post('https://books-management-twkp.onrender.com/api/auth/register', {
         email,
         password
       });
